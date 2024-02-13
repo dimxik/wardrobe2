@@ -1,0 +1,114 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Wardrobe',
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: const Text('Wardrobe')),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      width: 200,
+                      height: 300,
+                      color: Colors.blue,
+                      child: Center(child: Text('1')),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.green,
+                      child: Center(child: Text('3')),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 200,
+                      height: 50,
+                      color: Colors.yellow,
+                      child: Center(child: Text('5')),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 20),
+                Column(
+                  children: [
+                    Container(
+                      width: 200,
+                      height: 300,
+                      color: Colors.red,
+                      child: Center(child: Text('2')),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 200,
+                      height: 50,
+                      color: Color.fromARGB(255, 255, 0, 157),
+                      child: Center(child: Text('4')),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 200,
+                      height: 50,
+                      color: Color.fromARGB(255, 47, 0, 255),
+                      child: Center(child: Text('6')),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.orange,
+                  child: Center(child: Text('7')),
+                ),
+                SizedBox(width: 20),
+                Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.pink,
+                  child: Center(child: Text('8')),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
